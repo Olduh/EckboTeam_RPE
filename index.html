@@ -258,21 +258,39 @@
     <div class="divider"></div>
 
     <div class="form-group">
-      <label>RPE — Effort perçu <span style="color:var(--text-dim);font-size:.75em">(1 = très facile · 10 = maximal)</span></label>
+      <label>RPE — Effort perçu</label>
+      <div style="font-size:0.78rem;color:var(--text-muted);font-family:'DM Mono',monospace;line-height:1.55;margin-bottom:10px;">
+        À renseigner <strong style="color:var(--text)">dans l'heure qui suit la séance</strong>.<br>
+        Note l'intensité <em>globale</em> de l'effort fourni, de ton point de vue — pas la vitesse ou la distance, mais comment ton corps a vécu l'entraînement dans son ensemble.
+        <span style="display:block;margin-top:6px;color:var(--text-dim)">
+          1–2 = très facile, à peine essoufflé · 3–4 = confortable, tu pouvais parler ·
+          5–6 = modéré, effort soutenu · 7–8 = difficile, essoufflement marqué ·
+          9–10 = maximal, limite absolue
+        </span>
+      </div>
       <div class="slider-wrap">
         <input type="range" id="rpe" min="1" max="10" value="5" oninput="updateSlider('rpe','rpe-val'); updateChargePreview()">
         <div class="slider-val" id="rpe-val">5</div>
       </div>
-      <div class="slider-labels"><span>1</span><span>5</span><span>10</span></div>
+      <div class="slider-labels"><span>1 — facile</span><span>5–6 — modéré</span><span>10 — maximal</span></div>
     </div>
 
     <div class="form-group">
-      <label>Fatigue perçue <span style="color:var(--text-dim);font-size:.75em">(1 = reposé · 10 = épuisé)</span></label>
+      <label>Fatigue perçue</label>
+      <div style="font-size:0.78rem;color:var(--text-muted);font-family:'DM Mono',monospace;line-height:1.55;margin-bottom:10px;">
+        Évalue ton niveau de <em>fatigue générale</em> au moment de la saisie — pas seulement musculaire, mais aussi mentale et émotionnelle.
+        Pense à comment tu te sens <strong style="color:var(--text)">en ce moment</strong> : as-tu envie de te reposer, as-tu les jambes lourdes, as-tu du mal à te concentrer ?
+        <span style="display:block;margin-top:6px;color:var(--text-dim)">
+          1–2 = frais, reposé, plein d'énergie · 3–4 = légère fatigue normale ·
+          5–6 = fatigué mais fonctionnel · 7–8 = fatigue marquée, besoin de récupération ·
+          9–10 = épuisé, incapable de te concentrer ou de bouger normalement
+        </span>
+      </div>
       <div class="slider-wrap">
         <input type="range" id="fatigue" min="1" max="10" value="5" oninput="updateSlider('fatigue','fatigue-val')">
         <div class="slider-val" id="fatigue-val">5</div>
       </div>
-      <div class="slider-labels"><span>1</span><span>5</span><span>10</span></div>
+      <div class="slider-labels"><span>1 — reposé</span><span>5–6 — fatigué</span><span>10 — épuisé</span></div>
     </div>
 
     <div id="charge-preview" class="charge-preview"></div>
@@ -382,7 +400,7 @@
 // CONFIG JSONBIN
 // ============================================================
 const BIN_ID  = '69cd7f8eaaba882197b6ff91';
-const API_KEY = '$2a$10$.v6UjpKVj9PknccMSrcjcu2yJI3rQrwfSBG3122ZV7tQXdesFVFwi';
+const API_KEY = '$2a$10$Ox/wz5hURLVkNrQJjtlit.WKdUMBlQicmoMwTUtCmjSjouzL9Rp7K';
 const BIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 
 // ============================================================
